@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Parcial2_LindonCastillo.BLL;
+using Parcial2_LindonCastillo.DAL;
 using Parcial2_LindonCastillo.Entidades;
 using System;
 using System.Collections.Generic;
