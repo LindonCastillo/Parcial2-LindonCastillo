@@ -74,6 +74,12 @@
     <Compile Include="UI\Registros\rAsignatura.Designer.cs">
       <DependentUpon>rAsignatura.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Registros\rEstudiantes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Registros\rEstudiantes.Designer.cs">
+      <DependentUpon>rEstudiantes.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </EmbeddedResource>
@@ -89,6 +95,9 @@
     </Compile>
     <EmbeddedResource Include="UI\Registros\rAsignatura.resx">
       <DependentUpon>rAsignatura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Registros\rEstudiantes.resx">
+      <DependentUpon>rEstudiantes.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
