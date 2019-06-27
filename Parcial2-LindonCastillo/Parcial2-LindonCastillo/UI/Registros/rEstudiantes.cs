@@ -16,5 +16,6 @@ namespace Parcial2_LindonCastillo.UI.Registros
         {
             InitializeComponent();
         }
+
     }
 }

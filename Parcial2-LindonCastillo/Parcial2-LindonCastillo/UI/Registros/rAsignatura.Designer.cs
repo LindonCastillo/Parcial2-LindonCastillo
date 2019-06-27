@@ -36,11 +36,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.Creditos_numericUpDown = new System.Windows.Forms.NumericUpDown();
             this.Descripcion_textBox = new System.Windows.Forms.TextBox();
+            this.ErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.Buscar_button = new System.Windows.Forms.Button();
             this.Eliminar_button = new System.Windows.Forms.Button();
             this.Guardar_button = new System.Windows.Forms.Button();
             this.Nuevo_button = new System.Windows.Forms.Button();
-            this.ErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.AsignaturaId_numericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Creditos_numericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).BeginInit();
@@ -62,8 +62,13 @@
             this.AsignaturaId_numericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AsignaturaId_numericUpDown.Location = new System.Drawing.Point(127, 21);
             this.AsignaturaId_numericUpDown.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.AsignaturaId_numericUpDown.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
             this.AsignaturaId_numericUpDown.Name = "AsignaturaId_numericUpDown";
-            this.AsignaturaId_numericUpDown.Size = new System.Drawing.Size(118, 21);
+            this.AsignaturaId_numericUpDown.Size = new System.Drawing.Size(133, 21);
             this.AsignaturaId_numericUpDown.TabIndex = 5;
             // 
             // label2
@@ -110,6 +115,10 @@
             this.Descripcion_textBox.Name = "Descripcion_textBox";
             this.Descripcion_textBox.Size = new System.Drawing.Size(226, 21);
             this.Descripcion_textBox.TabIndex = 9;
+            // 
+            // ErrorProvider
+            // 
+            this.ErrorProvider.ContainerControl = this;
             // 
             // Buscar_button
             // 
@@ -170,10 +179,6 @@
             this.Nuevo_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Nuevo_button.UseVisualStyleBackColor = true;
             this.Nuevo_button.Click += new System.EventHandler(this.Nuevo_button_Click);
-            // 
-            // ErrorProvider
-            // 
-            this.ErrorProvider.ContainerControl = this;
             // 
             // rAsignatura
             // 
