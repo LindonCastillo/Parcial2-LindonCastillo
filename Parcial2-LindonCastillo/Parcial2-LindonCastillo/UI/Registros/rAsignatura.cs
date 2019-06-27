@@ -156,11 +156,11 @@ namespace Parcial2_LindonCastillo.UI.Registros
                 if(asignaturas != null)
                 {
                     LlenarCampos(asignaturas);
-                    MessageBox.Show("Asinatura Encontrada!", "Exito!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Asignatura Encontrada!", "Exito!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
-                    MessageBox.Show("Asinatura No Encontrado!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Asignatura No Encontrado!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
             }

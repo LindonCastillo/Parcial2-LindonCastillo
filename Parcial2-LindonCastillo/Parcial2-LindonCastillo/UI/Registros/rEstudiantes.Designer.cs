@@ -61,6 +61,7 @@
             this.Buscar_button.Text = "Buscar";
             this.Buscar_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Buscar_button.UseVisualStyleBackColor = true;
+            this.Buscar_button.Click += new System.EventHandler(this.Buscar_button_Click);
             // 
             // Eliminar_button
             // 
@@ -75,6 +76,7 @@
             this.Eliminar_button.Text = "Eliminar";
             this.Eliminar_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Eliminar_button.UseVisualStyleBackColor = true;
+            this.Eliminar_button.Click += new System.EventHandler(this.Eliminar_button_Click);
             // 
             // Guardar_button
             // 
@@ -89,6 +91,7 @@
             this.Guardar_button.Text = "Guardar";
             this.Guardar_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Guardar_button.UseVisualStyleBackColor = true;
+            this.Guardar_button.Click += new System.EventHandler(this.Guardar_button_Click);
             // 
             // Nuevo_button
             // 
@@ -103,6 +106,7 @@
             this.Nuevo_button.Text = "Nuevo";
             this.Nuevo_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Nuevo_button.UseVisualStyleBackColor = true;
+            this.Nuevo_button.Click += new System.EventHandler(this.Nuevo_button_Click);
             // 
             // EstudianteId_numericUpDown
             // 
@@ -153,7 +157,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(15, 108);
+            this.label3.Location = new System.Drawing.Point(13, 107);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(68, 20);
