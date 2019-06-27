@@ -26,6 +26,7 @@ namespace Parcial2_LindonCastillo.UI.Registros
 
         private void Limpiar()
         {
+            ErrorProvider.Clear();
             AsignaturaId_numericUpDown.Value = 0;
             Descripcion_textBox.Text = string.Empty;
             Creditos_numericUpDown.Value = 0;
@@ -33,8 +34,10 @@ namespace Parcial2_LindonCastillo.UI.Registros
 
         private bool Validar()
         {
+            RepositorioBase<Asignaturas> repositorio = new RepositorioBase<Asignaturas>();
             ErrorProvider.Clear();
             bool paso = true;
+
             if (string.IsNullOrWhiteSpace(Descripcion_textBox.Text))
             {
                 ErrorProvider.SetError(Descripcion_textBox, "El campo Descripción no puede estar vacío");
@@ -45,6 +48,18 @@ namespace Parcial2_LindonCastillo.UI.Registros
             {
                 ErrorProvider.SetError(Creditos_numericUpDown, "El valor de este campo no puede ser 0");
                 paso = false;
+            }
+
+            var listado = new List<Asignaturas>();
+            listado = repositorio.GetList(p => true);
+            string descripcion = Descripcion_textBox.Text;
+            foreach (var i in listado)
+            {
+                if(descripcion == i.Descripcion)
+                {
+                    MessageBox.Show("Esta Asignatura ya esta registrada","Error!",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                    paso = false;
+                }
             }
 
             return paso;

@@ -119,6 +119,7 @@ namespace Parcial2_LindonCastillo.UI.Registros
 
         private void Limpiar()
         {
+            errorProvider.Clear();
             EstudianteId_numericUpDown.Value = 0;
             FechaIngreso_dateTimePicker.Value = DateTime.Now;
             Nombre_textBox.Text = string.Empty;
@@ -127,6 +128,7 @@ namespace Parcial2_LindonCastillo.UI.Registros
 
         private bool Validar()
         {
+            RepositorioBase<Estudiantes> repositorio = new RepositorioBase<Estudiantes>();
             errorProvider.Clear();
             bool paso = true;
             if (string.IsNullOrWhiteSpace(Nombre_textBox.Text))
@@ -135,6 +137,17 @@ namespace Parcial2_LindonCastillo.UI.Registros
                 paso = false;
             }
 
+            var listado = new List<Estudiantes>();
+            listado = repositorio.GetList(p => true);
+            string nombre = Nombre_textBox.Text;
+            foreach (var i in listado)
+            {
+                if(nombre == i.Nombre)
+                {
+                    MessageBox.Show("Este estudiante ya esta registrado", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    paso = false;
+                }
+            }
 
             return paso;
         }
