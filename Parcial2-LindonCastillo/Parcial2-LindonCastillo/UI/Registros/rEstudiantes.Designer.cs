@@ -136,7 +136,7 @@
             // Nombre_textBox
             // 
             this.Nombre_textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Nombre_textBox.Location = new System.Drawing.Point(132, 107);
+            this.Nombre_textBox.Location = new System.Drawing.Point(132, 103);
             this.Nombre_textBox.Margin = new System.Windows.Forms.Padding(4);
             this.Nombre_textBox.Name = "Nombre_textBox";
             this.Nombre_textBox.Size = new System.Drawing.Size(226, 21);
@@ -157,7 +157,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(13, 107);
+            this.label3.Location = new System.Drawing.Point(13, 103);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(68, 20);
@@ -168,7 +168,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(13, 152);
+            this.label4.Location = new System.Drawing.Point(13, 148);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(70, 20);
@@ -178,7 +178,7 @@
             // Balance_numericUpDown
             // 
             this.Balance_numericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Balance_numericUpDown.Location = new System.Drawing.Point(132, 149);
+            this.Balance_numericUpDown.Location = new System.Drawing.Point(132, 145);
             this.Balance_numericUpDown.Margin = new System.Windows.Forms.Padding(4);
             this.Balance_numericUpDown.Maximum = new decimal(new int[] {
             10000000,
