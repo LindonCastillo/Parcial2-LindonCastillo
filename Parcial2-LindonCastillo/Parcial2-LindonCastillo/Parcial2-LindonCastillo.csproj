@@ -134,5 +134,20 @@
   <ItemGroup>
     <None Include="Resources\seo-social-web-network-internet_262_icon-icons.com_61518.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\documents_books_6914.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Student-id512_44205.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\business_ordering_pencil_table_2333.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\seo-social-web-network-internet_322_icon-icons.com_61532.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\seo-social-web-network-internet_322_icon-icons.com_61532.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

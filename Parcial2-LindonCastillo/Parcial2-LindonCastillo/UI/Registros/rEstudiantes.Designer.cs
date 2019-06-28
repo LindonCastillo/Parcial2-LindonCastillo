@@ -68,7 +68,7 @@
             this.Eliminar_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Eliminar_button.Image = global::Parcial2_LindonCastillo.Properties.Resources.seo_social_web_network_internet_262_icon_icons_com_61518;
             this.Eliminar_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Eliminar_button.Location = new System.Drawing.Point(257, 200);
+            this.Eliminar_button.Location = new System.Drawing.Point(257, 186);
             this.Eliminar_button.Margin = new System.Windows.Forms.Padding(4);
             this.Eliminar_button.Name = "Eliminar_button";
             this.Eliminar_button.Size = new System.Drawing.Size(94, 28);
@@ -83,7 +83,7 @@
             this.Guardar_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Guardar_button.Image = global::Parcial2_LindonCastillo.Properties.Resources.seo_social_web_network_internet_273_icon_icons_com_61489;
             this.Guardar_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Guardar_button.Location = new System.Drawing.Point(146, 200);
+            this.Guardar_button.Location = new System.Drawing.Point(146, 186);
             this.Guardar_button.Margin = new System.Windows.Forms.Padding(4);
             this.Guardar_button.Name = "Guardar_button";
             this.Guardar_button.Size = new System.Drawing.Size(94, 28);
@@ -98,7 +98,7 @@
             this.Nuevo_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Nuevo_button.Image = global::Parcial2_LindonCastillo.Properties.Resources.seo_social_web_network_internet_83_icon_icons_com_61502;
             this.Nuevo_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Nuevo_button.Location = new System.Drawing.Point(33, 200);
+            this.Nuevo_button.Location = new System.Drawing.Point(33, 186);
             this.Nuevo_button.Margin = new System.Windows.Forms.Padding(4);
             this.Nuevo_button.Name = "Nuevo_button";
             this.Nuevo_button.Size = new System.Drawing.Size(94, 28);
@@ -191,6 +191,7 @@
             // 
             // FechaIngreso_dateTimePicker
             // 
+            this.FechaIngreso_dateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.FechaIngreso_dateTimePicker.Location = new System.Drawing.Point(132, 61);
             this.FechaIngreso_dateTimePicker.Name = "FechaIngreso_dateTimePicker";
             this.FechaIngreso_dateTimePicker.Size = new System.Drawing.Size(226, 20);
@@ -204,7 +205,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(386, 238);
+            this.ClientSize = new System.Drawing.Size(384, 228);
             this.Controls.Add(this.FechaIngreso_dateTimePicker);
             this.Controls.Add(this.Balance_numericUpDown);
             this.Controls.Add(this.label4);
@@ -219,7 +220,7 @@
             this.Controls.Add(this.Nuevo_button);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "rEstudiantes";
-            this.Text = "rEstudiantes";
+            this.Text = "Registro de Estudiantes";
             ((System.ComponentModel.ISupportInitialize)(this.EstudianteId_numericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Balance_numericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();

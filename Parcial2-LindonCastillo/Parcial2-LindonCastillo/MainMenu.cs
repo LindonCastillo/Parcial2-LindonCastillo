@@ -29,5 +29,11 @@ namespace Parcial2_LindonCastillo
             rEstudiantes estudiantes = new rEstudiantes();
             estudiantes.Show();
         }
+
+        private void InscripcionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            rInscripcion inscripcion = new rInscripcion();
+            inscripcion.Show();
+        }
     }
 }

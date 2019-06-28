@@ -31,9 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenu));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.registroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.inscripcionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.asignaturaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.estudianteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.inscripcionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,8 +57,17 @@
             this.registroToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
             this.registroToolStripMenuItem.Text = "&Registro";
             // 
+            // inscripcionToolStripMenuItem
+            // 
+            this.inscripcionToolStripMenuItem.Image = global::Parcial2_LindonCastillo.Properties.Resources.business_ordering_pencil_table_2333;
+            this.inscripcionToolStripMenuItem.Name = "inscripcionToolStripMenuItem";
+            this.inscripcionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.inscripcionToolStripMenuItem.Text = "&Inscripcion";
+            this.inscripcionToolStripMenuItem.Click += new System.EventHandler(this.InscripcionToolStripMenuItem_Click);
+            // 
             // asignaturaToolStripMenuItem
             // 
+            this.asignaturaToolStripMenuItem.Image = global::Parcial2_LindonCastillo.Properties.Resources.documents_books_6914;
             this.asignaturaToolStripMenuItem.Name = "asignaturaToolStripMenuItem";
             this.asignaturaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.asignaturaToolStripMenuItem.Text = "&Asignatura";
@@ -66,16 +75,11 @@
             // 
             // estudianteToolStripMenuItem
             // 
+            this.estudianteToolStripMenuItem.Image = global::Parcial2_LindonCastillo.Properties.Resources.Student_id512_44205;
             this.estudianteToolStripMenuItem.Name = "estudianteToolStripMenuItem";
             this.estudianteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.estudianteToolStripMenuItem.Text = "&Estudiante";
             this.estudianteToolStripMenuItem.Click += new System.EventHandler(this.EstudianteToolStripMenuItem_Click);
-            // 
-            // inscripcionToolStripMenuItem
-            // 
-            this.inscripcionToolStripMenuItem.Name = "inscripcionToolStripMenuItem";
-            this.inscripcionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.inscripcionToolStripMenuItem.Text = "&Inscripcion";
             // 
             // MainMenu
             // 

@@ -63,6 +63,26 @@ namespace Parcial2_LindonCastillo.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap business_ordering_pencil_table_2333 {
+            get {
+                object obj = ResourceManager.GetObject("business_ordering_pencil_table_2333", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap documents_books_6914 {
+            get {
+                object obj = ResourceManager.GetObject("documents_books_6914", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap seo_social_web_network_internet_262_icon_icons_com_61518 {
             get {
                 object obj = ResourceManager.GetObject("seo-social-web-network-internet_262_icon-icons.com_61518", resourceCulture);
@@ -83,6 +103,26 @@ namespace Parcial2_LindonCastillo.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap seo_social_web_network_internet_322_icon_icons_com_61532 {
+            get {
+                object obj = ResourceManager.GetObject("seo-social-web-network-internet_322_icon-icons.com_61532", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap seo_social_web_network_internet_322_icon_icons1 {
+            get {
+                object obj = ResourceManager.GetObject("seo-social-web-network-internet_322_icon-icons1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap seo_social_web_network_internet_340_icon_icons_com_61497 {
             get {
                 object obj = ResourceManager.GetObject("seo-social-web-network-internet_340_icon-icons.com_61497", resourceCulture);
@@ -96,6 +136,16 @@ namespace Parcial2_LindonCastillo.Properties {
         internal static System.Drawing.Bitmap seo_social_web_network_internet_83_icon_icons_com_61502 {
             get {
                 object obj = ResourceManager.GetObject("seo-social-web-network-internet_83_icon-icons.com_61502", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Student_id512_44205 {
+            get {
+                object obj = ResourceManager.GetObject("Student-id512_44205", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
