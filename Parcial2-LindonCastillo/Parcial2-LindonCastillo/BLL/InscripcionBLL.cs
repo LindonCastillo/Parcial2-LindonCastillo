@@ -113,7 +113,7 @@ namespace Parcial2_LindonCastillo.BLL
             return inscripcion;
         }
 
-        public static List<Inscripcion> GetList(Expression<Func<Inscripcion, bool>> inscripcion)
+        public static List<Inscripcion> GetList(Expression<Func<Inscripcion, bool>> inscripcion) 
         {
             List<Inscripcion> lista = new List<Inscripcion>();
             Contexto db = new Contexto();
