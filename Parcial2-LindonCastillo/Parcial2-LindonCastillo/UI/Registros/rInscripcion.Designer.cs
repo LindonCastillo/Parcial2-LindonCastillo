@@ -34,18 +34,18 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.FechaIngreso_dateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.Fecha_dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
+            this.Remover_button = new System.Windows.Forms.Button();
             this.Agregar_button = new System.Windows.Forms.Button();
             this.Descripcion_textBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.BuscarAsignatura_button = new System.Windows.Forms.Button();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.AsignaturaId_numericUpDown = new System.Windows.Forms.NumericUpDown();
             this.Detalle_dataGridView = new System.Windows.Forms.DataGridView();
             this.label5 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.Monto_numericUpDown = new System.Windows.Forms.NumericUpDown();
             this.InscripcionId_numericUpDown = new System.Windows.Forms.NumericUpDown();
             this.BuscarEstudiante_button = new System.Windows.Forms.Button();
             this.Eliminar_button = new System.Windows.Forms.Button();
@@ -54,13 +54,13 @@
             this.Buscar_button = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.Estudiante_textBox = new System.Windows.Forms.TextBox();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.EstudianteId_numericUpDown)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AsignaturaId_numericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Detalle_dataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Monto_numericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.InscripcionId_numericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
@@ -68,7 +68,7 @@
             // EstudianteId_numericUpDown
             // 
             this.EstudianteId_numericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EstudianteId_numericUpDown.Location = new System.Drawing.Point(141, 119);
+            this.EstudianteId_numericUpDown.Location = new System.Drawing.Point(133, 119);
             this.EstudianteId_numericUpDown.Margin = new System.Windows.Forms.Padding(4);
             this.EstudianteId_numericUpDown.Maximum = new decimal(new int[] {
             10000000,
@@ -105,20 +105,20 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(38, 121);
+            this.label3.Location = new System.Drawing.Point(37, 121);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(87, 17);
             this.label3.TabIndex = 17;
             this.label3.Text = "EstudianteId";
             // 
-            // FechaIngreso_dateTimePicker
+            // Fecha_dateTimePicker
             // 
-            this.FechaIngreso_dateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.FechaIngreso_dateTimePicker.Location = new System.Drawing.Point(141, 51);
-            this.FechaIngreso_dateTimePicker.Name = "FechaIngreso_dateTimePicker";
-            this.FechaIngreso_dateTimePicker.Size = new System.Drawing.Size(231, 20);
-            this.FechaIngreso_dateTimePicker.TabIndex = 19;
+            this.Fecha_dateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.Fecha_dateTimePicker.Location = new System.Drawing.Point(133, 51);
+            this.Fecha_dateTimePicker.Name = "Fecha_dateTimePicker";
+            this.Fecha_dateTimePicker.Size = new System.Drawing.Size(231, 20);
+            this.Fecha_dateTimePicker.TabIndex = 19;
             // 
             // label4
             // 
@@ -134,12 +134,12 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.Remover_button);
             this.panel1.Controls.Add(this.Agregar_button);
             this.panel1.Controls.Add(this.Descripcion_textBox);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.BuscarAsignatura_button);
-            this.panel1.Controls.Add(this.numericUpDown2);
+            this.panel1.Controls.Add(this.AsignaturaId_numericUpDown);
             this.panel1.Controls.Add(this.Detalle_dataGridView);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(23, 167);
@@ -147,24 +147,24 @@
             this.panel1.Size = new System.Drawing.Size(483, 286);
             this.panel1.TabIndex = 20;
             // 
-            // button3
+            // Remover_button
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Image = global::Parcial2_LindonCastillo.Properties.Resources.seo_social_web_network_internet_322_icon_icons1;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(16, 252);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(134, 28);
-            this.button3.TabIndex = 30;
-            this.button3.Text = "Remover Fila";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button3.UseVisualStyleBackColor = true;
+            this.Remover_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Remover_button.Image = global::Parcial2_LindonCastillo.Properties.Resources.seo_social_web_network_internet_322_icon_icons1;
+            this.Remover_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Remover_button.Location = new System.Drawing.Point(16, 252);
+            this.Remover_button.Margin = new System.Windows.Forms.Padding(4);
+            this.Remover_button.Name = "Remover_button";
+            this.Remover_button.Size = new System.Drawing.Size(134, 28);
+            this.Remover_button.TabIndex = 30;
+            this.Remover_button.Text = "Remover Fila";
+            this.Remover_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Remover_button.UseVisualStyleBackColor = true;
             // 
             // Agregar_button
             // 
             this.Agregar_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Agregar_button.Location = new System.Drawing.Point(441, 21);
+            this.Agregar_button.Location = new System.Drawing.Point(442, 19);
             this.Agregar_button.Margin = new System.Windows.Forms.Padding(4);
             this.Agregar_button.Name = "Agregar_button";
             this.Agregar_button.Size = new System.Drawing.Size(26, 24);
@@ -175,16 +175,16 @@
             // 
             // Descripcion_textBox
             // 
-            this.Descripcion_textBox.Location = new System.Drawing.Point(284, 25);
+            this.Descripcion_textBox.Location = new System.Drawing.Point(277, 22);
             this.Descripcion_textBox.Name = "Descripcion_textBox";
-            this.Descripcion_textBox.Size = new System.Drawing.Size(150, 20);
+            this.Descripcion_textBox.Size = new System.Drawing.Size(160, 20);
             this.Descripcion_textBox.TabIndex = 28;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(203, 26);
+            this.label6.Location = new System.Drawing.Point(187, 25);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(83, 17);
@@ -195,7 +195,7 @@
             // 
             this.BuscarAsignatura_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BuscarAsignatura_button.Image = global::Parcial2_LindonCastillo.Properties.Resources.seo_social_web_network_internet_340_icon_icons_com_61497;
-            this.BuscarAsignatura_button.Location = new System.Drawing.Point(162, 17);
+            this.BuscarAsignatura_button.Location = new System.Drawing.Point(146, 17);
             this.BuscarAsignatura_button.Margin = new System.Windows.Forms.Padding(4);
             this.BuscarAsignatura_button.Name = "BuscarAsignatura_button";
             this.BuscarAsignatura_button.Size = new System.Drawing.Size(33, 29);
@@ -203,19 +203,19 @@
             this.BuscarAsignatura_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BuscarAsignatura_button.UseVisualStyleBackColor = true;
             // 
-            // numericUpDown2
+            // AsignaturaId_numericUpDown
             // 
-            this.numericUpDown2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown2.Location = new System.Drawing.Point(41, 24);
-            this.numericUpDown2.Margin = new System.Windows.Forms.Padding(4);
-            this.numericUpDown2.Maximum = new decimal(new int[] {
+            this.AsignaturaId_numericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AsignaturaId_numericUpDown.Location = new System.Drawing.Point(41, 24);
+            this.AsignaturaId_numericUpDown.Margin = new System.Windows.Forms.Padding(4);
+            this.AsignaturaId_numericUpDown.Maximum = new decimal(new int[] {
             10000000,
             0,
             0,
             0});
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(116, 21);
-            this.numericUpDown2.TabIndex = 25;
+            this.AsignaturaId_numericUpDown.Name = "AsignaturaId_numericUpDown";
+            this.AsignaturaId_numericUpDown.Size = new System.Drawing.Size(97, 21);
+            this.AsignaturaId_numericUpDown.TabIndex = 25;
             // 
             // Detalle_dataGridView
             // 
@@ -236,24 +236,24 @@
             this.label5.TabIndex = 22;
             this.label5.Text = "Monto";
             // 
-            // numericUpDown1
+            // Monto_numericUpDown
             // 
-            this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown1.Location = new System.Drawing.Point(141, 84);
-            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(4);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
+            this.Monto_numericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Monto_numericUpDown.Location = new System.Drawing.Point(133, 84);
+            this.Monto_numericUpDown.Margin = new System.Windows.Forms.Padding(4);
+            this.Monto_numericUpDown.Maximum = new decimal(new int[] {
             10000000,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(231, 21);
-            this.numericUpDown1.TabIndex = 21;
+            this.Monto_numericUpDown.Name = "Monto_numericUpDown";
+            this.Monto_numericUpDown.Size = new System.Drawing.Size(231, 21);
+            this.Monto_numericUpDown.TabIndex = 21;
             // 
             // InscripcionId_numericUpDown
             // 
             this.InscripcionId_numericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.InscripcionId_numericUpDown.Location = new System.Drawing.Point(141, 20);
+            this.InscripcionId_numericUpDown.Location = new System.Drawing.Point(133, 20);
             this.InscripcionId_numericUpDown.Margin = new System.Windows.Forms.Padding(4);
             this.InscripcionId_numericUpDown.Maximum = new decimal(new int[] {
             10000000,
@@ -268,7 +268,7 @@
             // 
             this.BuscarEstudiante_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BuscarEstudiante_button.Image = global::Parcial2_LindonCastillo.Properties.Resources.seo_social_web_network_internet_340_icon_icons_com_61497;
-            this.BuscarEstudiante_button.Location = new System.Drawing.Point(228, 114);
+            this.BuscarEstudiante_button.Location = new System.Drawing.Point(220, 114);
             this.BuscarEstudiante_button.Margin = new System.Windows.Forms.Padding(4);
             this.BuscarEstudiante_button.Name = "BuscarEstudiante_button";
             this.BuscarEstudiante_button.Size = new System.Drawing.Size(32, 28);
@@ -323,7 +323,7 @@
             this.Buscar_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Buscar_button.Image = global::Parcial2_LindonCastillo.Properties.Resources.seo_social_web_network_internet_340_icon_icons_com_61497;
             this.Buscar_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Buscar_button.Location = new System.Drawing.Point(287, 17);
+            this.Buscar_button.Location = new System.Drawing.Point(279, 17);
             this.Buscar_button.Margin = new System.Windows.Forms.Padding(4);
             this.Buscar_button.Name = "Buscar_button";
             this.Buscar_button.Size = new System.Drawing.Size(85, 28);
@@ -347,19 +347,19 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(268, 121);
+            this.label8.Location = new System.Drawing.Point(260, 121);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(75, 17);
             this.label8.TabIndex = 26;
             this.label8.Text = "Estudiante";
             // 
-            // textBox2
+            // Estudiante_textBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(345, 118);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(156, 20);
-            this.textBox2.TabIndex = 27;
+            this.Estudiante_textBox.Location = new System.Drawing.Point(337, 118);
+            this.Estudiante_textBox.Name = "Estudiante_textBox";
+            this.Estudiante_textBox.Size = new System.Drawing.Size(155, 20);
+            this.Estudiante_textBox.TabIndex = 27;
             // 
             // errorProvider
             // 
@@ -370,15 +370,15 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(526, 501);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.Estudiante_textBox);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.InscripcionId_numericUpDown);
             this.Controls.Add(this.BuscarEstudiante_button);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.Monto_numericUpDown);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.FechaIngreso_dateTimePicker);
+            this.Controls.Add(this.Fecha_dateTimePicker);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Eliminar_button);
@@ -393,9 +393,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.EstudianteId_numericUpDown)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AsignaturaId_numericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Detalle_dataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Monto_numericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.InscripcionId_numericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
@@ -413,23 +413,23 @@
         private System.Windows.Forms.Button Nuevo_button;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DateTimePicker FechaIngreso_dateTimePicker;
+        private System.Windows.Forms.DateTimePicker Fecha_dateTimePicker;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView Detalle_dataGridView;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown Monto_numericUpDown;
         private System.Windows.Forms.NumericUpDown InscripcionId_numericUpDown;
         private System.Windows.Forms.Button BuscarEstudiante_button;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button Remover_button;
         private System.Windows.Forms.Button Agregar_button;
         private System.Windows.Forms.TextBox Descripcion_textBox;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button BuscarAsignatura_button;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.NumericUpDown AsignaturaId_numericUpDown;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox Estudiante_textBox;
         private System.Windows.Forms.ErrorProvider errorProvider;
     }
 }

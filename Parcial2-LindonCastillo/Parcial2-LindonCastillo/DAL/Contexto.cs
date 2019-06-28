@@ -12,7 +12,7 @@ namespace Parcial2_LindonCastillo.DAL
     {
         public DbSet<Asignaturas> Asignatura { get; set; }
         public DbSet<Estudiantes> Estudiante { get; set; }
-        //public DbSet<Inscripcion> Inscripcion { get; set; }
+        public DbSet<Inscripcion> Inscripcion { get; set; }
 
         public Contexto() : base("Constr")
         { }
