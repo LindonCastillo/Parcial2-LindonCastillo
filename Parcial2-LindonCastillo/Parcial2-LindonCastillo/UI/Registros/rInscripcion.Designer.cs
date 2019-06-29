@@ -160,7 +160,6 @@
             this.Remover_button.Text = "Remover Fila";
             this.Remover_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Remover_button.UseVisualStyleBackColor = true;
-            this.Remover_button.Click += new System.EventHandler(this.Remover_button_Click);
             // 
             // Agregar_button
             // 

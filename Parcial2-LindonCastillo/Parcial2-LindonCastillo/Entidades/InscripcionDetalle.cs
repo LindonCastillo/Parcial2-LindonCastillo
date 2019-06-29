@@ -20,7 +20,15 @@ namespace Parcial2_LindonCastillo.Entidades
             Id = 0;
             InscripcionId = 0;
             EstudianteId = 0;
+            AsignaturaId = 0;
+        }
 
+        public InscripcionDetalle(int Id, int InscripcionId, int EstudianteId, int AsignaturaId)
+        {
+            this.Id = Id;
+            this.InscripcionId = InscripcionId;
+            this.EstudianteId = EstudianteId;
+            this.AsignaturaId = AsignaturaId;
         }
     }
 }
