@@ -50,6 +50,14 @@ namespace Parcial2_LindonCastillo.UI.Registros
                 paso = false;
             }
 
+
+            int prueba = 0;
+            if (int.TryParse(Descripcion_textBox.Text, out prueba))
+            {
+                ErrorProvider.SetError(Descripcion_textBox, "El campo Descripción no pueden ser numeros");
+                paso = false;
+            }
+
             var listado = new List<Asignaturas>();
             listado = repositorio.GetList(p => true);
             string descripcion = Descripcion_textBox.Text;

@@ -137,6 +137,13 @@ namespace Parcial2_LindonCastillo.UI.Registros
                 paso = false;
             }
 
+            int prueba = 0;
+            if (int.TryParse(Nombre_textBox.Text, out prueba))
+            {
+                errorProvider.SetError(Nombre_textBox, "El campo Nombre no pueden ser numeros");
+                paso = false;
+            }
+
             var listado = new List<Estudiantes>();
             listado = repositorio.GetList(p => true);
             string nombre = Nombre_textBox.Text;
