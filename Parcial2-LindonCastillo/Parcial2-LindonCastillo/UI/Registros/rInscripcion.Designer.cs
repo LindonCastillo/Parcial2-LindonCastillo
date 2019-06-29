@@ -142,7 +142,7 @@
             this.panel1.Controls.Add(this.AsignaturaId_numericUpDown);
             this.panel1.Controls.Add(this.Detalle_dataGridView);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(23, 167);
+            this.panel1.Location = new System.Drawing.Point(22, 160);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(483, 286);
             this.panel1.TabIndex = 20;
@@ -160,6 +160,7 @@
             this.Remover_button.Text = "Remover Fila";
             this.Remover_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Remover_button.UseVisualStyleBackColor = true;
+            this.Remover_button.Click += new System.EventHandler(this.Remover_button_Click);
             // 
             // Agregar_button
             // 
@@ -172,6 +173,7 @@
             this.Agregar_button.Text = "+";
             this.Agregar_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Agregar_button.UseVisualStyleBackColor = true;
+            this.Agregar_button.Click += new System.EventHandler(this.Agregar_button_Click);
             // 
             // Descripcion_textBox
             // 
@@ -202,6 +204,7 @@
             this.BuscarAsignatura_button.TabIndex = 26;
             this.BuscarAsignatura_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BuscarAsignatura_button.UseVisualStyleBackColor = true;
+            this.BuscarAsignatura_button.Click += new System.EventHandler(this.BuscarAsignatura_button_Click);
             // 
             // AsignaturaId_numericUpDown
             // 
@@ -220,9 +223,9 @@
             // Detalle_dataGridView
             // 
             this.Detalle_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Detalle_dataGridView.Location = new System.Drawing.Point(3, 53);
+            this.Detalle_dataGridView.Location = new System.Drawing.Point(16, 53);
             this.Detalle_dataGridView.Name = "Detalle_dataGridView";
-            this.Detalle_dataGridView.Size = new System.Drawing.Size(474, 195);
+            this.Detalle_dataGridView.Size = new System.Drawing.Size(452, 195);
             this.Detalle_dataGridView.TabIndex = 12;
             // 
             // label5
@@ -275,13 +278,14 @@
             this.BuscarEstudiante_button.TabIndex = 23;
             this.BuscarEstudiante_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BuscarEstudiante_button.UseVisualStyleBackColor = true;
+            this.BuscarEstudiante_button.Click += new System.EventHandler(this.BuscarEstudiante_button_Click);
             // 
             // Eliminar_button
             // 
             this.Eliminar_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Eliminar_button.Image = global::Parcial2_LindonCastillo.Properties.Resources.seo_social_web_network_internet_262_icon_icons_com_61518;
             this.Eliminar_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Eliminar_button.Location = new System.Drawing.Point(322, 460);
+            this.Eliminar_button.Location = new System.Drawing.Point(321, 453);
             this.Eliminar_button.Margin = new System.Windows.Forms.Padding(4);
             this.Eliminar_button.Name = "Eliminar_button";
             this.Eliminar_button.Size = new System.Drawing.Size(94, 28);
@@ -289,13 +293,14 @@
             this.Eliminar_button.Text = "Eliminar";
             this.Eliminar_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Eliminar_button.UseVisualStyleBackColor = true;
+            this.Eliminar_button.Click += new System.EventHandler(this.Eliminar_button_Click);
             // 
             // Guardar_button
             // 
             this.Guardar_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Guardar_button.Image = global::Parcial2_LindonCastillo.Properties.Resources.seo_social_web_network_internet_273_icon_icons_com_61489;
             this.Guardar_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Guardar_button.Location = new System.Drawing.Point(211, 460);
+            this.Guardar_button.Location = new System.Drawing.Point(210, 453);
             this.Guardar_button.Margin = new System.Windows.Forms.Padding(4);
             this.Guardar_button.Name = "Guardar_button";
             this.Guardar_button.Size = new System.Drawing.Size(94, 28);
@@ -303,13 +308,14 @@
             this.Guardar_button.Text = "Guardar";
             this.Guardar_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Guardar_button.UseVisualStyleBackColor = true;
+            this.Guardar_button.Click += new System.EventHandler(this.Guardar_button_Click);
             // 
             // Nuevo_button
             // 
             this.Nuevo_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Nuevo_button.Image = global::Parcial2_LindonCastillo.Properties.Resources.seo_social_web_network_internet_83_icon_icons_com_61502;
             this.Nuevo_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Nuevo_button.Location = new System.Drawing.Point(98, 460);
+            this.Nuevo_button.Location = new System.Drawing.Point(97, 453);
             this.Nuevo_button.Margin = new System.Windows.Forms.Padding(4);
             this.Nuevo_button.Name = "Nuevo_button";
             this.Nuevo_button.Size = new System.Drawing.Size(94, 28);
@@ -317,6 +323,7 @@
             this.Nuevo_button.Text = "Nuevo";
             this.Nuevo_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Nuevo_button.UseVisualStyleBackColor = true;
+            this.Nuevo_button.Click += new System.EventHandler(this.Nuevo_button_Click);
             // 
             // Buscar_button
             // 
@@ -331,12 +338,13 @@
             this.Buscar_button.Text = "Buscar";
             this.Buscar_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Buscar_button.UseVisualStyleBackColor = true;
+            this.Buscar_button.Click += new System.EventHandler(this.Buscar_button_Click);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(37, 155);
+            this.label7.Location = new System.Drawing.Point(36, 148);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(93, 20);

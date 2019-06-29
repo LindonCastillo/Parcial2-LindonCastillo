@@ -16,14 +16,15 @@ namespace Parcial2_LindonCastillo.BLL
         {
             bool paso = false;
             Contexto db = new Contexto();
+            Inscripcion i = new Inscripcion();
 
             try
             {
-
-                //foreach (var item in inscripcion.Detalle)
-                //{
-                //    db.Estudiante.Find(item.EstudianteId).Balance +=  
-                //}
+                foreach (var item in inscripcion.Detalle)
+                {
+                    decimal calculo = db.Asignatura.Find(item.AsignaturaId).Creditos * i.Monto;
+                    db.Estudiante.Find(item.EstudianteId).Balance += calculo;
+                }
 
                 if (db.Inscripcion.Add(inscripcion) != null)
                     paso = db.SaveChanges() > 0;
@@ -47,7 +48,7 @@ namespace Parcial2_LindonCastillo.BLL
 
             try
             {
-                var anterior = db.Inscripcion.Find(inscripcion.InscripcionId);
+                var anterior = Buscar(inscripcion.InscripcionId);
                 foreach (var item in anterior.Detalle)
                 {
                     if (!inscripcion.Detalle.Exists(d => d.Id == item.Id))
