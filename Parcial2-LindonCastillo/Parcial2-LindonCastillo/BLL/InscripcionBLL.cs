@@ -19,6 +19,12 @@ namespace Parcial2_LindonCastillo.BLL
 
             try
             {
+
+                //foreach (var item in inscripcion.Detalle)
+                //{
+                //    db.Estudiante.Find(item.EstudianteId).Balance +=  
+                //}
+
                 if (db.Inscripcion.Add(inscripcion) != null)
                     paso = db.SaveChanges() > 0;
             }
@@ -33,7 +39,6 @@ namespace Parcial2_LindonCastillo.BLL
 
             return paso;
         } 
-
 
         public static bool Modificar(Inscripcion inscripcion)
         {

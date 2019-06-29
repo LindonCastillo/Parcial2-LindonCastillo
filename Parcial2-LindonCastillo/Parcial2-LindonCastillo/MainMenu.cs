@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Parcial2_LindonCastillo.UI.Registros;
+using Parcial2_LindonCastillo.UI.Consultas;
 
 namespace Parcial2_LindonCastillo
 {
@@ -34,6 +35,18 @@ namespace Parcial2_LindonCastillo
         {
             rInscripcion inscripcion = new rInscripcion();
             inscripcion.Show();
+        }
+
+        private void AsignaturaToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            cAsignatura asignatura = new cAsignatura();
+            asignatura.Show();
+        }
+
+        private void EstudianteToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            cEstudiante estudiante = new cEstudiante();
+            estudiante.Show();
         }
     }
 }

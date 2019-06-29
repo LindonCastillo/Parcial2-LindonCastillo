@@ -83,6 +83,16 @@ namespace Parcial2_LindonCastillo.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icono {
+            get {
+                object obj = ResourceManager.GetObject("icono", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap seo_social_web_network_internet_262_icon_icons_com_61518 {
             get {
                 object obj = ResourceManager.GetObject("seo-social-web-network-internet_262_icon-icons.com_61518", resourceCulture);

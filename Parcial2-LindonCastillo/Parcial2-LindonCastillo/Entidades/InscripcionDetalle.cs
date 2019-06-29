@@ -13,6 +13,7 @@ namespace Parcial2_LindonCastillo.Entidades
         public int Id { get; set; }
         public int InscripcionId { get; set; }
         public int EstudianteId { get; set; }
+        public int AsignaturaId { get; set; }
 
         public InscripcionDetalle()
         {
