@@ -190,7 +190,7 @@ namespace Parcial2_LindonCastillo.UI.Registros
             }
             catch (Exception)
             {
-                MessageBox.Show("Hubo un error eliminando");
+                MessageBox.Show("No se pudo eliminar");
             }
 
         }
@@ -216,7 +216,7 @@ namespace Parcial2_LindonCastillo.UI.Registros
             }
             catch (Exception)
             {
-                MessageBox.Show("Ocurrió un error al buscar");
+                MessageBox.Show("No se pudo buscar");
             }
 
 
@@ -298,7 +298,7 @@ namespace Parcial2_LindonCastillo.UI.Registros
             Monto_textBox.Text = CalculoMonto().ToString();
         }
 
-        private decimal CalculoMonto()
+        public decimal CalculoMonto()
         {
             decimal monto = 0;
 

@@ -1,5 +1,6 @@
 ﻿using Parcial2_LindonCastillo.DAL;
 using Parcial2_LindonCastillo.Entidades;
+using Parcial2_LindonCastillo.UI.Registros;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -17,18 +18,22 @@ namespace Parcial2_LindonCastillo.BLL
             bool paso = false;
             Contexto db = new Contexto();
             Inscripcion i = new Inscripcion();
-
+            rInscripcion ri = new rInscripcion();
+            RepositorioBase<Estudiantes> repositorio = new RepositorioBase<Estudiantes>();
             //decimal calculo = 0;
             try
             {
-                //foreach (var item in inscripcion.Detalle)
-                //{
-                //    db.Asignatura.Find(item.AsignaturaId).Creditos * i.Monto;
-                //    db.Estudiante.Find(item.EstudianteId).Balance += calculo;
-                //}
-
                 if (db.Inscripcion.Add(inscripcion) != null)
+                {
+                    foreach (var item in i.Detalle)
+                    {
+                        var estudiante = db.Estudiante.Find(item.EstudianteId);
+                        estudiante.Balance = ri.CalculoMonto();
+                        repositorio.Modificar(estudiante);
+                    }
                     paso = db.SaveChanges() > 0;
+                }
+                    
             }
             catch(Exception)
             {

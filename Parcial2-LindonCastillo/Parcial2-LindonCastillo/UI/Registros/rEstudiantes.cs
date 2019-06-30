@@ -103,7 +103,7 @@ namespace Parcial2_LindonCastillo.UI.Registros
                 if (estudiantes != null)
                 {
                     LlenarCampos(estudiantes);
-                    MessageBox.Show("Estudiante Encontrada!", "Exito!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Estudiante Encontrado!", "Exito!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {

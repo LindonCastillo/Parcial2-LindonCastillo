@@ -1,4 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Parcial2_LindonCastillo.BLL;
+using Parcial2_LindonCastillo.DAL;
 using Parcial2_LindonCastillo.Entidades;
 using System;
 using System.Collections.Generic;
@@ -11,56 +13,57 @@ namespace Parcial2_LindonCastillo.Entidades.Tests
     [TestClass()]
     public class InscripcionTests
     {
-        //[TestMethod()]
-        //public void GuardarTest()
-        //{
-        //    RepositorioBase<Estudiantes> test = new RepositorioBase<Estudiantes>();
-        //    Estudiantes estudiantes = new Estudiantes();
-        //    estudiantes.EstudianteId = 0;
-        //    estudiantes.FechaIngreso = DateTime.Now;
-        //    estudiantes.Nombre = "Paco";
-        //    estudiantes.Balance = 2000;
-        //    Assert.IsTrue(test.Guardar(estudiantes));
-        //}
+        [TestMethod()]
+        public void GuardarTest()
+        {
+            Contexto db = new Contexto();
+            Inscripcion inscripcion = new Inscripcion();
+            inscripcion.InscripcionId = 0;
+            inscripcion.Fecha = DateTime.Now;
+            inscripcion.Monto = 0;
 
-        //[TestMethod()]
-        //public void ModificarTest()
-        //{
-        //    RepositorioBase<Estudiantes> db = new RepositorioBase<Estudiantes>();
+            inscripcion.Detalle.Add(new InscripcionDetalle()
+            {
+                Id = 0,
+                InscripcionId = 1,
+                EstudianteId = 1,
+                AsignaturaId = 1,
+                Subtotal = 1000
+            }
+            );
 
-        //    Estudiantes estudiantes = new Estudiantes();
-        //    estudiantes.EstudianteId = 1;
-        //    estudiantes.FechaIngreso = DateTime.Now;
-        //    estudiantes.Nombre = "Paco";
-        //    estudiantes.Balance = 3500;
-        //    Assert.IsTrue(db.Modificar(estudiantes));
+            Assert.IsTrue(InscripcionBLL.Guardar(inscripcion));
+        }
 
-        //}
+        [TestMethod()]
+        public void ModificarTest()
+        {
+            Inscripcion inscripcion = new Inscripcion();
+            inscripcion.InscripcionId = 1;
+            inscripcion.Fecha = DateTime.Now;
+            inscripcion.Monto = 300;
 
-        //[TestMethod()]
-        //public void BuscarTest()
-        //{
-        //    RepositorioBase<Estudiantes> db = new RepositorioBase<Estudiantes>();
+            Assert.IsTrue(InscripcionBLL.Modificar(inscripcion));
+        }
 
-        //    Assert.IsNotNull(db.Buscar(1));
+        [TestMethod()]
+        public void BuscarTest()
+        {
+            Assert.IsNotNull(InscripcionBLL.Buscar(1));
 
-        //}
+        }
 
-        //[TestMethod()]
-        //public void GetListTest()
-        //{
-        //    RepositorioBase<Estudiantes> db = new RepositorioBase<Estudiantes>();
+        [TestMethod()]
+        public void GetListTest()
+        {
+            Assert.IsNotNull(InscripcionBLL.GetList(t => true));
 
-        //    Assert.IsNotNull(db.GetList(t => true));
+        }
 
-        //}
-
-        //[TestMethod()]
-        //public void EliminarTest()
-        //{
-        //    RepositorioBase<Estudiantes> db = new RepositorioBase<Estudiantes>();
-
-        //    Assert.IsTrue(db.Eliminar(1));
-        //}
+        [TestMethod()]
+        public void EliminarTest()
+        {
+            Assert.IsTrue(InscripcionBLL.Eliminar(1));
+        }
     }
 }

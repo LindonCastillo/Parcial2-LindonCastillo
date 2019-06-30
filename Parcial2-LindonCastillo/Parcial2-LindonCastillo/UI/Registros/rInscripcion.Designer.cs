@@ -135,6 +135,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.SystemColors.Control;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.Monto_textBox);
             this.panel1.Controls.Add(this.label5);
@@ -148,17 +149,17 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(22, 160);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(483, 286);
+            this.panel1.Size = new System.Drawing.Size(483, 269);
             this.panel1.TabIndex = 20;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(241, 259);
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(237, 241);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(50, 17);
+            this.label5.Size = new System.Drawing.Size(48, 16);
             this.label5.TabIndex = 22;
             this.label5.Text = "Monto";
             // 
@@ -167,7 +168,7 @@
             this.Remover_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Remover_button.Image = global::Parcial2_LindonCastillo.Properties.Resources.seo_social_web_network_internet_322_icon_icons1;
             this.Remover_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Remover_button.Location = new System.Drawing.Point(16, 252);
+            this.Remover_button.Location = new System.Drawing.Point(16, 234);
             this.Remover_button.Margin = new System.Windows.Forms.Padding(4);
             this.Remover_button.Name = "Remover_button";
             this.Remover_button.Size = new System.Drawing.Size(134, 28);
@@ -192,8 +193,10 @@
             // 
             // Descripcion_textBox
             // 
+            this.Descripcion_textBox.BackColor = System.Drawing.Color.White;
             this.Descripcion_textBox.Location = new System.Drawing.Point(277, 22);
             this.Descripcion_textBox.Name = "Descripcion_textBox";
+            this.Descripcion_textBox.ReadOnly = true;
             this.Descripcion_textBox.Size = new System.Drawing.Size(160, 20);
             this.Descripcion_textBox.TabIndex = 28;
             // 
@@ -240,7 +243,7 @@
             this.Detalle_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Detalle_dataGridView.Location = new System.Drawing.Point(16, 53);
             this.Detalle_dataGridView.Name = "Detalle_dataGridView";
-            this.Detalle_dataGridView.Size = new System.Drawing.Size(452, 195);
+            this.Detalle_dataGridView.Size = new System.Drawing.Size(452, 174);
             this.Detalle_dataGridView.TabIndex = 12;
             // 
             // InscripcionId_numericUpDown
@@ -275,10 +278,10 @@
             this.Eliminar_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Eliminar_button.Image = global::Parcial2_LindonCastillo.Properties.Resources.seo_social_web_network_internet_262_icon_icons_com_61518;
             this.Eliminar_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Eliminar_button.Location = new System.Drawing.Point(321, 453);
+            this.Eliminar_button.Location = new System.Drawing.Point(320, 436);
             this.Eliminar_button.Margin = new System.Windows.Forms.Padding(4);
             this.Eliminar_button.Name = "Eliminar_button";
-            this.Eliminar_button.Size = new System.Drawing.Size(94, 28);
+            this.Eliminar_button.Size = new System.Drawing.Size(96, 35);
             this.Eliminar_button.TabIndex = 15;
             this.Eliminar_button.Text = "Eliminar";
             this.Eliminar_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -290,10 +293,10 @@
             this.Guardar_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Guardar_button.Image = global::Parcial2_LindonCastillo.Properties.Resources.seo_social_web_network_internet_273_icon_icons_com_61489;
             this.Guardar_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Guardar_button.Location = new System.Drawing.Point(210, 453);
+            this.Guardar_button.Location = new System.Drawing.Point(209, 436);
             this.Guardar_button.Margin = new System.Windows.Forms.Padding(4);
             this.Guardar_button.Name = "Guardar_button";
-            this.Guardar_button.Size = new System.Drawing.Size(94, 28);
+            this.Guardar_button.Size = new System.Drawing.Size(96, 35);
             this.Guardar_button.TabIndex = 14;
             this.Guardar_button.Text = "Guardar";
             this.Guardar_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -305,10 +308,10 @@
             this.Nuevo_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Nuevo_button.Image = global::Parcial2_LindonCastillo.Properties.Resources.seo_social_web_network_internet_83_icon_icons_com_61502;
             this.Nuevo_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Nuevo_button.Location = new System.Drawing.Point(97, 453);
+            this.Nuevo_button.Location = new System.Drawing.Point(96, 436);
             this.Nuevo_button.Margin = new System.Windows.Forms.Padding(4);
             this.Nuevo_button.Name = "Nuevo_button";
-            this.Nuevo_button.Size = new System.Drawing.Size(94, 28);
+            this.Nuevo_button.Size = new System.Drawing.Size(96, 35);
             this.Nuevo_button.TabIndex = 13;
             this.Nuevo_button.Text = "Nuevo";
             this.Nuevo_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -354,8 +357,10 @@
             // 
             // Estudiante_textBox
             // 
+            this.Estudiante_textBox.BackColor = System.Drawing.Color.White;
             this.Estudiante_textBox.Location = new System.Drawing.Point(337, 118);
             this.Estudiante_textBox.Name = "Estudiante_textBox";
+            this.Estudiante_textBox.ReadOnly = true;
             this.Estudiante_textBox.Size = new System.Drawing.Size(155, 20);
             this.Estudiante_textBox.TabIndex = 27;
             // 
@@ -390,8 +395,10 @@
             // 
             // Monto_textBox
             // 
-            this.Monto_textBox.Location = new System.Drawing.Point(298, 256);
+            this.Monto_textBox.BackColor = System.Drawing.Color.White;
+            this.Monto_textBox.Location = new System.Drawing.Point(294, 238);
             this.Monto_textBox.Name = "Monto_textBox";
+            this.Monto_textBox.ReadOnly = true;
             this.Monto_textBox.Size = new System.Drawing.Size(155, 20);
             this.Monto_textBox.TabIndex = 31;
             // 
@@ -399,7 +406,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(526, 501);
+            this.ClientSize = new System.Drawing.Size(522, 484);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.PrecioCredito_numericUpDown);
             this.Controls.Add(this.Estudiante_textBox);
