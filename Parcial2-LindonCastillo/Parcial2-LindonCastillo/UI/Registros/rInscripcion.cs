@@ -267,11 +267,13 @@ namespace Parcial2_LindonCastillo.UI.Registros
 
         private void Agregar_button_Click(object sender, EventArgs e)
         {
-
+            RepositorioBase<Asignaturas> repositorio = new RepositorioBase<Asignaturas>();
             if (!Validar2())
             {
                 return;
             }
+            Asignaturas Asignatura;
+            Asignatura = repositorio.Buscar((int)AsignaturaId_numericUpDown.Value);
 
             if (Detalle_dataGridView.DataSource != null)
                 this.Detalle = (List < InscripcionDetalle >)Detalle_dataGridView.DataSource;
@@ -279,10 +281,11 @@ namespace Parcial2_LindonCastillo.UI.Registros
 
             this.Detalle.Add(
                 new InscripcionDetalle(
-                    Id:0,
-                    InscripcionId:(int)InscripcionId_numericUpDown.Value,
+                    Id: 0,
+                    InscripcionId: (int)InscripcionId_numericUpDown.Value,
                     EstudianteId: (int)EstudianteId_numericUpDown.Value,
-                    AsignaturaId: (int)AsignaturaId_numericUpDown.Value
+                    AsignaturaId: (int)AsignaturaId_numericUpDown.Value,
+                    Subtotal: Asignatura.Creditos*PrecioCredito_numericUpDown.Value
                     )
                 );
             CargarGrid();

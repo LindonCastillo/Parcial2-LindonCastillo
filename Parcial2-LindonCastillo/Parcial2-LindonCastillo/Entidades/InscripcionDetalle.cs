@@ -15,6 +15,7 @@ namespace Parcial2_LindonCastillo.Entidades
         public int InscripcionId { get; set; }
         public int EstudianteId { get; set; }
         public int AsignaturaId { get; set; }
+        public decimal Subtotal { get; set; }
 
         public InscripcionDetalle()
         {
@@ -22,14 +23,16 @@ namespace Parcial2_LindonCastillo.Entidades
             InscripcionId = 0;
             EstudianteId = 0;
             AsignaturaId = 0;
+            Subtotal = 0;
         }
 
-        public InscripcionDetalle(int Id, int InscripcionId, int EstudianteId, int AsignaturaId)
+        public InscripcionDetalle(int Id, int InscripcionId, int EstudianteId, int AsignaturaId, decimal Subtotal)
         {
             this.Id = Id;
             this.InscripcionId = InscripcionId;
             this.EstudianteId = EstudianteId;
             this.AsignaturaId = AsignaturaId;
+            this.Subtotal = Subtotal;
         }
     }
 }
