@@ -34,7 +34,6 @@ namespace Parcial2_LindonCastillo.UI.Registros
 
         private bool Validar()
         {
-            RepositorioBase<Asignaturas> repositorio = new RepositorioBase<Asignaturas>();
             ErrorProvider.Clear();
             bool paso = true;
 
@@ -50,7 +49,6 @@ namespace Parcial2_LindonCastillo.UI.Registros
                 paso = false;
             }
 
-
             int prueba = 0;
             if (int.TryParse(Descripcion_textBox.Text, out prueba))
             {
@@ -58,15 +56,19 @@ namespace Parcial2_LindonCastillo.UI.Registros
                 paso = false;
             }
 
-            var listado = new List<Asignaturas>();
-            listado = repositorio.GetList(p => true);
-            string descripcion = Descripcion_textBox.Text;
-            foreach (var i in listado)
+            if (AsignaturaId_numericUpDown.Value == 0)
             {
-                if(descripcion == i.Descripcion)
+                RepositorioBase<Asignaturas> repositorio = new RepositorioBase<Asignaturas>();
+                var listado = new List<Asignaturas>();
+                listado = repositorio.GetList(p => true);
+                string descripcion = Descripcion_textBox.Text;
+                foreach (var i in listado)
                 {
-                    MessageBox.Show("Esta Asignatura ya esta registrada","Error!",MessageBoxButtons.OK,MessageBoxIcon.Error);
-                    paso = false;
+                    if (descripcion == i.Descripcion)
+                    {
+                        MessageBox.Show("Esta Asignatura ya está registrada", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        paso = false;
+                    }
                 }
             }
 

@@ -144,16 +144,20 @@ namespace Parcial2_LindonCastillo.UI.Registros
                 paso = false;
             }
 
-            var listado = new List<Estudiantes>();
-            listado = repositorio.GetList(p => true);
-            string nombre = Nombre_textBox.Text;
-            foreach (var i in listado)
+            if(EstudianteId_numericUpDown.Value == 0)
             {
-                if(nombre == i.Nombre)
+                var listado = new List<Estudiantes>();
+                listado = repositorio.GetList(p => true);
+                string nombre = Nombre_textBox.Text;
+                foreach (var i in listado)
                 {
-                    MessageBox.Show("Este estudiante ya esta registrado", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    paso = false;
+                    if(nombre == i.Nombre)
+                    {
+                        MessageBox.Show("Este estudiante ya está registrado", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        paso = false;
+                    }
                 }
+
             }
 
             return paso;
