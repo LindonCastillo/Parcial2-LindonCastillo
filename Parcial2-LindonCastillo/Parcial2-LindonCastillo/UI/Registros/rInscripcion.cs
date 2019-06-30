@@ -142,7 +142,7 @@ namespace Parcial2_LindonCastillo.UI.Registros
 
             inscripcion = LlenarClase();
 
-            if (AsignaturaId_numericUpDown.Value == 0)
+            if (InscripcionId_numericUpDown.Value == 0)
             {
                 paso = InscripcionBLL.Guardar(inscripcion);
             }

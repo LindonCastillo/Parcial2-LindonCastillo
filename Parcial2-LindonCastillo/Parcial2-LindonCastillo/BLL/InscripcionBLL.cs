@@ -18,19 +18,27 @@ namespace Parcial2_LindonCastillo.BLL
             bool paso = false;
             Contexto db = new Contexto();
             Inscripcion i = new Inscripcion();
-            rInscripcion ri = new rInscripcion();
             RepositorioBase<Estudiantes> repositorio = new RepositorioBase<Estudiantes>();
-            //decimal calculo = 0;
             try
             {
+                decimal acumulador = 0;
+                int estudianteId = 0;
                 if (db.Inscripcion.Add(inscripcion) != null)
                 {
-                    foreach (var item in i.Detalle)
+                    foreach (var item in inscripcion.Detalle)
                     {
-                        var estudiante = db.Estudiante.Find(item.EstudianteId);
-                        estudiante.Balance = ri.CalculoMonto();
-                        repositorio.Modificar(estudiante);
+                        estudianteId = item.EstudianteId;
                     }
+                    var estudiante = db.Estudiante.Find(estudianteId);
+
+                    foreach (var item in inscripcion.Detalle)
+                    {
+                        acumulador += item.Subtotal;
+                    }
+                    estudiante.Balance = 0;
+                    repositorio.Modificar(estudiante);
+                    estudiante.Balance += acumulador;
+                    repositorio.Modificar(estudiante);
                     paso = db.SaveChanges() > 0;
                 }
                     
@@ -57,9 +65,41 @@ namespace Parcial2_LindonCastillo.BLL
                 var anterior = Buscar(inscripcion.InscripcionId);
                 foreach (var item in anterior.Detalle)
                 {
-                    if (!inscripcion.Detalle.Exists(d => d.Id == item.Id))
+                    if (!inscripcion.Detalle.Any(d => d.Id == item.Id))
                         db.Entry(item).State = EntityState.Deleted;
+
                 }
+               
+                foreach (var item in inscripcion.Detalle)
+                {
+                    if (item.Id == 0)
+                    {
+                        db.Entry(item).State = EntityState.Added;
+                    }
+                    else
+                    {
+                        db.Entry(item).State = EntityState.Modified;
+                    }
+                        
+                }
+                RepositorioBase<Estudiantes> repositorio = new RepositorioBase<Estudiantes>();
+                decimal acumulador = 0;
+                int estudianteId = 0;
+
+                foreach (var item in inscripcion.Detalle)
+                {
+                    estudianteId = item.EstudianteId;
+                }
+                var estudiante = db.Estudiante.Find(estudianteId);
+
+                foreach (var item in inscripcion.Detalle)
+                {
+                    acumulador += item.Subtotal;
+                }
+                estudiante.Balance = 0;
+                repositorio.Modificar(estudiante);
+                estudiante.Balance += acumulador;
+                repositorio.Modificar(estudiante);
 
                 db.Entry(inscripcion).State = EntityState.Modified;
                 paso = (db.SaveChanges() > 0);
@@ -82,12 +122,33 @@ namespace Parcial2_LindonCastillo.BLL
         {
             bool paso = false;
             Contexto db = new Contexto();
+            Inscripcion inscripcion = new Inscripcion();
 
             try
             {
                 var eliminar = db.Inscripcion.Find(id);
                 db.Entry(eliminar).State = EntityState.Deleted;
 
+                RepositorioBase<Estudiantes> repositorio = new RepositorioBase<Estudiantes>();
+                decimal acumulador = 0;
+                int estudianteId = 0;
+
+                foreach (var item in inscripcion.Detalle)
+                {
+                    estudianteId = item.EstudianteId;
+                }
+                var estudiante = db.Estudiante.Find(estudianteId);
+
+                foreach (var item in inscripcion.Detalle)
+                {
+                    acumulador += item.Subtotal;
+                }
+                estudiante.Balance = 0;
+                repositorio.Modificar(estudiante);
+                estudiante.Balance += acumulador;
+                repositorio.Modificar(estudiante);
+
+                db.Entry(inscripcion).State = EntityState.Modified;
                 paso = (db.SaveChanges() > 0);
             }
             catch
@@ -111,7 +172,11 @@ namespace Parcial2_LindonCastillo.BLL
             try
             {
                 inscripcion = db.Inscripcion.Find(id);
-                inscripcion.Detalle.Count();
+                if(inscripcion != null)
+                {
+                    inscripcion.Detalle.Count();
+                }
+                
             }
             catch(Exception)
             {
