@@ -18,13 +18,14 @@ namespace Parcial2_LindonCastillo.BLL
             Contexto db = new Contexto();
             Inscripcion i = new Inscripcion();
 
+            decimal calculo = 0;
             try
             {
-                foreach (var item in inscripcion.Detalle)
-                {
-                    decimal calculo = db.Asignatura.Find(item.AsignaturaId).Creditos * i.Monto;
-                    db.Estudiante.Find(item.EstudianteId).Balance += calculo;
-                }
+                //foreach (var item in inscripcion.Detalle)
+                //{
+                //    db.Asignatura.Find(item.AsignaturaId).Creditos * i.Monto;
+                //    db.Estudiante.Find(item.EstudianteId).Balance += calculo;
+                //}
 
                 if (db.Inscripcion.Add(inscripcion) != null)
                     paso = db.SaveChanges() > 0;

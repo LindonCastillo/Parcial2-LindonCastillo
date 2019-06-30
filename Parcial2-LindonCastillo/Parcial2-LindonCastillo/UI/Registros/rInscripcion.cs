@@ -292,15 +292,19 @@ namespace Parcial2_LindonCastillo.UI.Registros
 
         }
 
-        private void Remover_button_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void CargarGrid()
         {
             Detalle_dataGridView.DataSource = null;
             Detalle_dataGridView.DataSource = this.Detalle;
+        }
+
+        private void Remover_button_Click_1(object sender, EventArgs e)
+        {
+            if (Detalle_dataGridView.Rows.Count > 0 && Detalle_dataGridView.CurrentRow != null)
+            {
+                Detalle.RemoveAt(Detalle_dataGridView.CurrentRow.Index);
+                CargarGrid();
+            }
         }
     }
 }
