@@ -18,7 +18,7 @@ namespace Parcial2_LindonCastillo.BLL
             Contexto db = new Contexto();
             Inscripcion i = new Inscripcion();
 
-            decimal calculo = 0;
+            //decimal calculo = 0;
             try
             {
                 //foreach (var item in inscripcion.Detalle)

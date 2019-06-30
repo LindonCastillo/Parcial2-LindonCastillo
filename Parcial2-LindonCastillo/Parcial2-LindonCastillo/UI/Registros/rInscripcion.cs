@@ -25,7 +25,8 @@ namespace Parcial2_LindonCastillo.UI.Registros
         {
             InscripcionId_numericUpDown.Value = 0;
             Fecha_dateTimePicker.Value = DateTime.Now;
-            Monto_numericUpDown.Value = 0;
+            PrecioCredito_numericUpDown.Value = 0;
+            Monto_textBox.Text = string.Empty;
             EstudianteId_numericUpDown.Value = 0;
             Estudiante_textBox.Text = string.Empty;
             AsignaturaId_numericUpDown.Value = 0;
@@ -40,7 +41,7 @@ namespace Parcial2_LindonCastillo.UI.Registros
             Inscripcion i = new Inscripcion();
             i.InscripcionId = Convert.ToInt32(InscripcionId_numericUpDown.Value);
             i.Fecha = Fecha_dateTimePicker.Value;
-            i.Monto = Monto_numericUpDown.Value;
+            i.Monto = Convert.ToDecimal(Monto_textBox.Text);
             i.Detalle = this.Detalle;
 
             return i;
@@ -50,7 +51,7 @@ namespace Parcial2_LindonCastillo.UI.Registros
         {
             InscripcionId_numericUpDown.Value = inscripcion.InscripcionId;
             Fecha_dateTimePicker.Value = inscripcion.Fecha;
-            Monto_numericUpDown.Value = inscripcion.Monto;
+            Monto_textBox.Text = Convert.ToString(inscripcion.Monto);
 
             this.Detalle = inscripcion.Detalle;
             CargarGrid();
