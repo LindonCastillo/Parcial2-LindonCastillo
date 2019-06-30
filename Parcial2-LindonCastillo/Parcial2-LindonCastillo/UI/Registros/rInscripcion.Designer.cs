@@ -37,7 +37,6 @@
             this.Fecha_dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.Monto_numericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
             this.Remover_button = new System.Windows.Forms.Button();
             this.Agregar_button = new System.Windows.Forms.Button();
@@ -58,9 +57,9 @@
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.label9 = new System.Windows.Forms.Label();
             this.PrecioCredito_numericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.Monto_textBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.EstudianteId_numericUpDown)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Monto_numericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AsignaturaId_numericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Detalle_dataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.InscripcionId_numericUpDown)).BeginInit();
@@ -137,7 +136,7 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.Monto_numericUpDown);
+            this.panel1.Controls.Add(this.Monto_textBox);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.Remover_button);
             this.panel1.Controls.Add(this.Agregar_button);
@@ -152,25 +151,11 @@
             this.panel1.Size = new System.Drawing.Size(483, 286);
             this.panel1.TabIndex = 20;
             // 
-            // Monto_numericUpDown
-            // 
-            this.Monto_numericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Monto_numericUpDown.Location = new System.Drawing.Point(286, 259);
-            this.Monto_numericUpDown.Margin = new System.Windows.Forms.Padding(4);
-            this.Monto_numericUpDown.Maximum = new decimal(new int[] {
-            10000000,
-            0,
-            0,
-            0});
-            this.Monto_numericUpDown.Name = "Monto_numericUpDown";
-            this.Monto_numericUpDown.Size = new System.Drawing.Size(182, 21);
-            this.Monto_numericUpDown.TabIndex = 21;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(228, 259);
+            this.label5.Location = new System.Drawing.Point(241, 259);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(50, 17);
@@ -403,6 +388,13 @@
             this.PrecioCredito_numericUpDown.Size = new System.Drawing.Size(231, 21);
             this.PrecioCredito_numericUpDown.TabIndex = 30;
             // 
+            // Monto_textBox
+            // 
+            this.Monto_textBox.Location = new System.Drawing.Point(298, 256);
+            this.Monto_textBox.Name = "Monto_textBox";
+            this.Monto_textBox.Size = new System.Drawing.Size(155, 20);
+            this.Monto_textBox.TabIndex = 31;
+            // 
             // rInscripcion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -431,7 +423,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.EstudianteId_numericUpDown)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Monto_numericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.AsignaturaId_numericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Detalle_dataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.InscripcionId_numericUpDown)).EndInit();
@@ -457,7 +448,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView Detalle_dataGridView;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.NumericUpDown Monto_numericUpDown;
         private System.Windows.Forms.NumericUpDown InscripcionId_numericUpDown;
         private System.Windows.Forms.Button BuscarEstudiante_button;
         private System.Windows.Forms.Button Remover_button;
@@ -472,5 +462,6 @@
         private System.Windows.Forms.ErrorProvider errorProvider;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.NumericUpDown PrecioCredito_numericUpDown;
+        private System.Windows.Forms.TextBox Monto_textBox;
     }
 }

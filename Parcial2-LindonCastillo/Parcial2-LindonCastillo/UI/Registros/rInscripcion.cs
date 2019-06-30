@@ -61,14 +61,14 @@ namespace Parcial2_LindonCastillo.UI.Registros
             bool paso = true;
             errorProvider.Clear();
 
-            if (Monto_numericUpDown.Value == 0){
-                errorProvider.SetError(Monto_numericUpDown,"El campo Monto no puede ser cero");
+            if (PrecioCredito_numericUpDown.Value == 0){
+                errorProvider.SetError(PrecioCredito_numericUpDown, "El campo Precio Credito no puede ser cero");
                 paso = false;
             }
 
             if (this.Detalle.Count == 0)
             {
-                errorProvider.SetError(AsignaturaId_numericUpDown, "Debe agregar alguna Asignatura");
+                errorProvider.SetError(Detalle_dataGridView, "Debe agregar alguna Asignatura");
                 paso = false;
             }
 
@@ -81,9 +81,9 @@ namespace Parcial2_LindonCastillo.UI.Registros
             bool paso = true;
             errorProvider.Clear();
 
-            if (Monto_numericUpDown.Value == 0)
+            if (PrecioCredito_numericUpDown.Value == 0)
             {
-                errorProvider.SetError(Monto_numericUpDown, "El campo Monto no puede ser cero");
+                errorProvider.SetError(PrecioCredito_numericUpDown, "El campo Precio Credito no puede ser cero");
                 paso = false;
             }
 
@@ -293,6 +293,20 @@ namespace Parcial2_LindonCastillo.UI.Registros
             AsignaturaId_numericUpDown.Value = 0;
             Descripcion_textBox.Clear();
 
+
+            Monto_textBox.Text = CalculoMonto().ToString();
+        }
+
+        private decimal CalculoMonto()
+        {
+            decimal monto = 0;
+
+            foreach (var item in Detalle)
+            {
+                monto += item.Subtotal;
+            }
+
+            return monto;
         }
 
         private void CargarGrid()
@@ -307,6 +321,7 @@ namespace Parcial2_LindonCastillo.UI.Registros
             {
                 Detalle.RemoveAt(Detalle_dataGridView.CurrentRow.Index);
                 CargarGrid();
+                Monto_textBox.Text = CalculoMonto().ToString();
             }
         }
     }
