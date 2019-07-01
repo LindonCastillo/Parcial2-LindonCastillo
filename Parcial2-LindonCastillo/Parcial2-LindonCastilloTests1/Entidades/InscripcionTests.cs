@@ -39,9 +39,19 @@ namespace Parcial2_LindonCastillo.Entidades.Tests
         public void ModificarTest()
         {
             Inscripcion inscripcion = new Inscripcion();
-            inscripcion.InscripcionId = 1;
+            inscripcion.InscripcionId = 2;
             inscripcion.Fecha = DateTime.Now;
-            inscripcion.Monto = 300;
+            inscripcion.Monto = 0;
+
+            inscripcion.Detalle.Add(new InscripcionDetalle()
+            {
+                Id = 0,
+                InscripcionId = 1,
+                EstudianteId = 1,
+                AsignaturaId = 1,
+                Subtotal = 1000
+            }
+            );
 
             Assert.IsTrue(InscripcionBLL.Modificar(inscripcion));
         }

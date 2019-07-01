@@ -37,6 +37,7 @@
             this.Fecha_dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Monto_textBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.Remover_button = new System.Windows.Forms.Button();
             this.Agregar_button = new System.Windows.Forms.Button();
@@ -57,7 +58,6 @@
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.label9 = new System.Windows.Forms.Label();
             this.PrecioCredito_numericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.Monto_textBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.EstudianteId_numericUpDown)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AsignaturaId_numericUpDown)).BeginInit();
@@ -152,6 +152,15 @@
             this.panel1.Size = new System.Drawing.Size(483, 269);
             this.panel1.TabIndex = 20;
             // 
+            // Monto_textBox
+            // 
+            this.Monto_textBox.BackColor = System.Drawing.Color.White;
+            this.Monto_textBox.Location = new System.Drawing.Point(294, 238);
+            this.Monto_textBox.Name = "Monto_textBox";
+            this.Monto_textBox.ReadOnly = true;
+            this.Monto_textBox.Size = new System.Drawing.Size(155, 20);
+            this.Monto_textBox.TabIndex = 31;
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -240,9 +249,12 @@
             // 
             // Detalle_dataGridView
             // 
+            this.Detalle_dataGridView.AllowUserToAddRows = false;
+            this.Detalle_dataGridView.AllowUserToDeleteRows = false;
             this.Detalle_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Detalle_dataGridView.Location = new System.Drawing.Point(16, 53);
             this.Detalle_dataGridView.Name = "Detalle_dataGridView";
+            this.Detalle_dataGridView.ReadOnly = true;
             this.Detalle_dataGridView.Size = new System.Drawing.Size(452, 174);
             this.Detalle_dataGridView.TabIndex = 12;
             // 
@@ -392,15 +404,6 @@
             this.PrecioCredito_numericUpDown.Name = "PrecioCredito_numericUpDown";
             this.PrecioCredito_numericUpDown.Size = new System.Drawing.Size(231, 21);
             this.PrecioCredito_numericUpDown.TabIndex = 30;
-            // 
-            // Monto_textBox
-            // 
-            this.Monto_textBox.BackColor = System.Drawing.Color.White;
-            this.Monto_textBox.Location = new System.Drawing.Point(294, 238);
-            this.Monto_textBox.Name = "Monto_textBox";
-            this.Monto_textBox.ReadOnly = true;
-            this.Monto_textBox.Size = new System.Drawing.Size(155, 20);
-            this.Monto_textBox.TabIndex = 31;
             // 
             // rInscripcion
             // 
