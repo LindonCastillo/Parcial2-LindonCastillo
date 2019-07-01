@@ -59,6 +59,7 @@ namespace Parcial2_LindonCastillo.BLL
         {
             bool paso = false;
             Contexto db = new Contexto();
+            RepositorioBase<Estudiantes> repositorio = new RepositorioBase<Estudiantes>();
 
             try
             {
@@ -82,7 +83,7 @@ namespace Parcial2_LindonCastillo.BLL
                     }
                         
                 }
-                RepositorioBase<Estudiantes> repositorio = new RepositorioBase<Estudiantes>();
+
                 decimal acumulador = 0;
                 int estudianteId = 0;
 
@@ -122,33 +123,14 @@ namespace Parcial2_LindonCastillo.BLL
         {
             bool paso = false;
             Contexto db = new Contexto();
-            Inscripcion inscripcion = new Inscripcion();
 
+            
             try
             {
                 var eliminar = db.Inscripcion.Find(id);
+                
+
                 db.Entry(eliminar).State = EntityState.Deleted;
-
-                RepositorioBase<Estudiantes> repositorio = new RepositorioBase<Estudiantes>();
-                decimal acumulador = 0;
-                int estudianteId = 0;
-
-                foreach (var item in inscripcion.Detalle)
-                {
-                    estudianteId = item.EstudianteId;
-                }
-                var estudiante = db.Estudiante.Find(estudianteId);
-
-                foreach (var item in inscripcion.Detalle)
-                {
-                    acumulador += item.Subtotal;
-                }
-                estudiante.Balance = 0;
-                repositorio.Modificar(estudiante);
-                estudiante.Balance += acumulador;
-                repositorio.Modificar(estudiante);
-
-                db.Entry(inscripcion).State = EntityState.Modified;
                 paso = (db.SaveChanges() > 0);
             }
             catch
@@ -163,6 +145,15 @@ namespace Parcial2_LindonCastillo.BLL
             return paso;
         }
 
+        public static void Descontar(int id, decimal monto)
+        {
+            RepositorioBase<Estudiantes> repositorio = new RepositorioBase<Estudiantes>();
+            Estudiantes estudiantes;
+            estudiantes = repositorio.Buscar(id);
+            estudiantes.Balance -= monto;
+
+            repositorio.Modificar(estudiantes);
+        } 
 
         public static Inscripcion Buscar(int id)
         {

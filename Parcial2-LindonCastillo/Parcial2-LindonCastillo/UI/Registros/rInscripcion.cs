@@ -154,8 +154,9 @@ namespace Parcial2_LindonCastillo.UI.Registros
                     return;
                 }
 
-                paso = InscripcionBLL.Modificar(inscripcion);
-                MessageBox.Show("Se modifico con Exito!!", "Exito!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                 paso = InscripcionBLL.Modificar(inscripcion);
+
+                 MessageBox.Show("Se modifico con Exito!!", "Exito!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
             if (paso)
@@ -176,17 +177,20 @@ namespace Parcial2_LindonCastillo.UI.Registros
             int id;
             int.TryParse(InscripcionId_numericUpDown.Text, out id);
 
-            Limpiar();
             try
             {
                 if (InscripcionBLL.Eliminar(id))
                 {
+                    InscripcionBLL.Descontar(Detalle[0].EstudianteId,decimal.Parse(Monto_textBox.Text));
+                    Limpiar();
                     MessageBox.Show("Eliminado", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
                     MessageBox.Show("No se puede eliminar esta Inscripción", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
+
+                
             }
             catch (Exception)
             {
@@ -203,6 +207,7 @@ namespace Parcial2_LindonCastillo.UI.Registros
             Limpiar();
             try
             {
+                
                 inscripcion = InscripcionBLL.Buscar(id);
                 if(inscripcion != null)
                 {
@@ -216,7 +221,7 @@ namespace Parcial2_LindonCastillo.UI.Registros
             }
             catch (Exception)
             {
-                MessageBox.Show("No se pudo buscar");
+               MessageBox.Show("No se pudo buscar");
             }
 
 
