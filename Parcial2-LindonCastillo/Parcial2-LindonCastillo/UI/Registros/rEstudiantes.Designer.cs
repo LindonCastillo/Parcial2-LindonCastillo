@@ -40,12 +40,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.Balance_numericUpDown = new System.Windows.Forms.NumericUpDown();
             this.FechaIngreso_dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.Balance_numericUpDown = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.EstudianteId_numericUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Balance_numericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Balance_numericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // Buscar_button
@@ -175,20 +175,6 @@
             this.label4.TabIndex = 13;
             this.label4.Text = "Balance";
             // 
-            // Balance_numericUpDown
-            // 
-            this.Balance_numericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Balance_numericUpDown.Location = new System.Drawing.Point(132, 145);
-            this.Balance_numericUpDown.Margin = new System.Windows.Forms.Padding(4);
-            this.Balance_numericUpDown.Maximum = new decimal(new int[] {
-            1215752192,
-            23,
-            0,
-            0});
-            this.Balance_numericUpDown.Name = "Balance_numericUpDown";
-            this.Balance_numericUpDown.Size = new System.Drawing.Size(226, 21);
-            this.Balance_numericUpDown.TabIndex = 14;
-            // 
             // FechaIngreso_dateTimePicker
             // 
             this.FechaIngreso_dateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
@@ -200,6 +186,23 @@
             // errorProvider
             // 
             this.errorProvider.ContainerControl = this;
+            // 
+            // Balance_numericUpDown
+            // 
+            this.Balance_numericUpDown.BackColor = System.Drawing.Color.White;
+            this.Balance_numericUpDown.Enabled = false;
+            this.Balance_numericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Balance_numericUpDown.Location = new System.Drawing.Point(132, 145);
+            this.Balance_numericUpDown.Margin = new System.Windows.Forms.Padding(4);
+            this.Balance_numericUpDown.Maximum = new decimal(new int[] {
+            1215752192,
+            23,
+            0,
+            0});
+            this.Balance_numericUpDown.Name = "Balance_numericUpDown";
+            this.Balance_numericUpDown.ReadOnly = true;
+            this.Balance_numericUpDown.Size = new System.Drawing.Size(226, 21);
+            this.Balance_numericUpDown.TabIndex = 14;
             // 
             // rEstudiantes
             // 
@@ -222,8 +225,8 @@
             this.Name = "rEstudiantes";
             this.Text = "Registro de Estudiantes";
             ((System.ComponentModel.ISupportInitialize)(this.EstudianteId_numericUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Balance_numericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Balance_numericUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -241,8 +244,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.NumericUpDown Balance_numericUpDown;
         private System.Windows.Forms.DateTimePicker FechaIngreso_dateTimePicker;
         private System.Windows.Forms.ErrorProvider errorProvider;
+        private System.Windows.Forms.NumericUpDown Balance_numericUpDown;
     }
 }

@@ -103,7 +103,6 @@ namespace Parcial2_LindonCastillo.UI.Registros
             Estudiantes estudiantes;
             int id = Convert.ToInt32(EstudianteId_numericUpDown.Value);
 
-
             Limpiar();
             try
             {
@@ -122,8 +121,8 @@ namespace Parcial2_LindonCastillo.UI.Registros
             }
             catch (Exception)
             {
-                throw;
-                //MessageBox.Show("Hubo un Error al buscar");
+  
+                MessageBox.Show("Hubo un Error al buscar");
             }
         }
 
