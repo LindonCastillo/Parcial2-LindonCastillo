@@ -61,7 +61,7 @@
             // 
             this.AsignaturaId_numericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AsignaturaId_numericUpDown.Location = new System.Drawing.Point(127, 21);
-            this.AsignaturaId_numericUpDown.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.AsignaturaId_numericUpDown.Margin = new System.Windows.Forms.Padding(4);
             this.AsignaturaId_numericUpDown.Maximum = new decimal(new int[] {
             10000000,
             0,
@@ -97,9 +97,9 @@
             // 
             this.Creditos_numericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Creditos_numericUpDown.Location = new System.Drawing.Point(127, 104);
-            this.Creditos_numericUpDown.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Creditos_numericUpDown.Margin = new System.Windows.Forms.Padding(4);
             this.Creditos_numericUpDown.Maximum = new decimal(new int[] {
-            1000,
+            10,
             0,
             0,
             0});
@@ -111,7 +111,7 @@
             // 
             this.Descripcion_textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Descripcion_textBox.Location = new System.Drawing.Point(127, 63);
-            this.Descripcion_textBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Descripcion_textBox.Margin = new System.Windows.Forms.Padding(4);
             this.Descripcion_textBox.Name = "Descripcion_textBox";
             this.Descripcion_textBox.Size = new System.Drawing.Size(226, 21);
             this.Descripcion_textBox.TabIndex = 9;
@@ -197,7 +197,7 @@
             this.Controls.Add(this.Nuevo_button);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "rAsignatura";
             this.Text = "Registro de Asignatura";
             ((System.ComponentModel.ISupportInitialize)(this.AsignaturaId_numericUpDown)).EndInit();
