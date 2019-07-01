@@ -1,4 +1,5 @@
 ﻿using Parcial2_LindonCastillo.BLL;
+using Parcial2_LindonCastillo.DAL;
 using Parcial2_LindonCastillo.Entidades;
 using System;
 using System.Collections.Generic;
@@ -231,22 +232,25 @@ namespace Parcial2_LindonCastillo.UI.Registros
         {
             RepositorioBase<Estudiantes> repositorio = new RepositorioBase<Estudiantes>();
             Estudiantes estudiantes;
-            if(EstudianteId_numericUpDown.Value != 0)
-            {
+
                 try
                 {
-                    estudiantes = repositorio.Buscar((int)EstudianteId_numericUpDown.Value);
-                    Estudiante_textBox.Text = estudiantes.Nombre;
+                    if (EstudianteId_numericUpDown.Value != 0)
+                    {
+                        estudiantes = repositorio.Buscar((int)EstudianteId_numericUpDown.Value);
+                        Estudiante_textBox.Text = estudiantes.Nombre;
+                    }            
+                    else
+                    {
+                        MessageBox.Show("Debe poner un Id Para buscar a un estudiante");
+                    }
+
                 }
                 catch (Exception)
                 {
                     MessageBox.Show("Estudiante no encontrado");
                 }
-            }
-            else
-            {
-                MessageBox.Show("Debe poner un Id Para buscar a un estudiante");
-            }
+
         }
 
         private void BuscarAsignatura_button_Click(object sender, EventArgs e)
@@ -284,30 +288,45 @@ namespace Parcial2_LindonCastillo.UI.Registros
                 MessageBox.Show("Esta asignatura ya esta inscrita", "Fallo!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
+            try
+            {
+                Contexto db = new Contexto();
+                Estudiantes estudiantes;
+                estudiantes = db.Estudiante.Find((int)EstudianteId_numericUpDown.Value);
+                if(estudiantes == null)
+                {
+                    MessageBox.Show("Estudiante no encontrado");
+                }
+               
+                Asignaturas Asignatura;
+                Asignatura = repositorio.Buscar((int)AsignaturaId_numericUpDown.Value);
 
-            Asignaturas Asignatura;
-            Asignatura = repositorio.Buscar((int)AsignaturaId_numericUpDown.Value);
-
-            if (Detalle_dataGridView.DataSource != null)
-                this.Detalle = (List < InscripcionDetalle >)Detalle_dataGridView.DataSource;
-
-
-            this.Detalle.Add(
-                new InscripcionDetalle(
-                    Id: 0,
-                    InscripcionId: (int)InscripcionId_numericUpDown.Value,
-                    EstudianteId: (int)EstudianteId_numericUpDown.Value,
-                    AsignaturaId: (int)AsignaturaId_numericUpDown.Value,
-                    Subtotal: Asignatura.Creditos*PrecioCredito_numericUpDown.Value
-                    )
-                );
-            CargarGrid();
-            AsignaturaId_numericUpDown.Focus();
-            AsignaturaId_numericUpDown.Value = 0;
-            Descripcion_textBox.Clear();
+                if (Detalle_dataGridView.DataSource != null)
+                    this.Detalle = (List < InscripcionDetalle >)Detalle_dataGridView.DataSource;
 
 
-            Monto_textBox.Text = CalculoMonto().ToString();
+                this.Detalle.Add(
+                    new InscripcionDetalle(
+                        Id: 0,
+                        InscripcionId: (int)InscripcionId_numericUpDown.Value,
+                        EstudianteId: (int)EstudianteId_numericUpDown.Value,
+                        AsignaturaId: (int)AsignaturaId_numericUpDown.Value,
+                        Subtotal: Asignatura.Creditos*PrecioCredito_numericUpDown.Value
+                        )
+                    );
+                CargarGrid();
+                AsignaturaId_numericUpDown.Focus();
+                AsignaturaId_numericUpDown.Value = 0;
+                Descripcion_textBox.Clear();
+
+
+                Monto_textBox.Text = CalculoMonto().ToString();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Asignatura no encontrada");
+            }
+ 
         }
 
         public decimal CalculoMonto()
