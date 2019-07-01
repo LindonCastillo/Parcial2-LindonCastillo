@@ -1,4 +1,5 @@
 ﻿using Parcial2_LindonCastillo.BLL;
+using Parcial2_LindonCastillo.DAL;
 using Parcial2_LindonCastillo.Entidades;
 using System;
 using System.Collections.Generic;
@@ -69,6 +70,14 @@ namespace Parcial2_LindonCastillo.UI.Registros
             RepositorioBase<Estudiantes> repositorio = new RepositorioBase<Estudiantes>();
             errorProvider.Clear();
             int id = Convert.ToInt32(EstudianteId_numericUpDown.Value);
+            Contexto db = new Contexto();
+            Estudiantes estudiantes;
+            estudiantes = db.Estudiante.Find(id);
+            if(estudiantes.Balance > 0)
+            {
+                MessageBox.Show("El estudiante aún tiene balance pendiente", "Fallo!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); ;
+                return;
+            }
 
             Limpiar();
             try
