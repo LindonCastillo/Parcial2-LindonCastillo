@@ -278,6 +278,13 @@ namespace Parcial2_LindonCastillo.UI.Registros
             {
                 return;
             }
+
+            if (Detalle.Any(A => A.AsignaturaId == AsignaturaId_numericUpDown.Value))
+            {
+                MessageBox.Show("Esta asignatura ya esta inscrita", "Fallo!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
             Asignaturas Asignatura;
             Asignatura = repositorio.Buscar((int)AsignaturaId_numericUpDown.Value);
 
