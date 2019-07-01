@@ -181,8 +181,8 @@
             this.Balance_numericUpDown.Location = new System.Drawing.Point(132, 145);
             this.Balance_numericUpDown.Margin = new System.Windows.Forms.Padding(4);
             this.Balance_numericUpDown.Maximum = new decimal(new int[] {
-            10000000,
-            0,
+            1215752192,
+            23,
             0,
             0});
             this.Balance_numericUpDown.Name = "Balance_numericUpDown";

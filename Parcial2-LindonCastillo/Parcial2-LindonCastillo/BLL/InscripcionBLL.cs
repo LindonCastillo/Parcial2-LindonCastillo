@@ -128,7 +128,6 @@ namespace Parcial2_LindonCastillo.BLL
             try
             {
                 var eliminar = db.Inscripcion.Find(id);
-                
 
                 db.Entry(eliminar).State = EntityState.Deleted;
                 paso = (db.SaveChanges() > 0);

@@ -115,6 +115,16 @@ namespace Parcial2_LindonCastillo.UI.Registros
             if (AsignaturaId_numericUpDown.Value == 0)
             {
                 paso = repositorio.Guardar(asignaturas);
+
+                if (paso)
+                {
+                    Limpiar();
+                    MessageBox.Show("Guardado!!", "Exito!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("No fue posible guardar!!", "Fallo!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             else
             {
@@ -126,16 +136,6 @@ namespace Parcial2_LindonCastillo.UI.Registros
 
                 paso = repositorio.Modificar(asignaturas);
                 MessageBox.Show("Se modifico con Exito!!", "Exito!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-
-            if (paso)
-            {
-                Limpiar();
-                MessageBox.Show("Guardado!!", "Exito!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                MessageBox.Show("No fue posible guardar!!", "Fallo!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }

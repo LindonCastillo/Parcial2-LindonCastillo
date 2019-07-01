@@ -40,9 +40,12 @@
             // 
             // Consulta_dataGridView
             // 
+            this.Consulta_dataGridView.AllowUserToAddRows = false;
+            this.Consulta_dataGridView.AllowUserToDeleteRows = false;
             this.Consulta_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Consulta_dataGridView.Location = new System.Drawing.Point(12, 63);
             this.Consulta_dataGridView.Name = "Consulta_dataGridView";
+            this.Consulta_dataGridView.ReadOnly = true;
             this.Consulta_dataGridView.Size = new System.Drawing.Size(549, 252);
             this.Consulta_dataGridView.TabIndex = 0;
             // 

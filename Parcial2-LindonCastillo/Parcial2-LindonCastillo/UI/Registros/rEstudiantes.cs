@@ -113,7 +113,8 @@ namespace Parcial2_LindonCastillo.UI.Registros
             }
             catch (Exception)
             {
-                MessageBox.Show("Hubo un Error al buscar");
+                throw;
+                //MessageBox.Show("Hubo un Error al buscar");
             }
         }
 
