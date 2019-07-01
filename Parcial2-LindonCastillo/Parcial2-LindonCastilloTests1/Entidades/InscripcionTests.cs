@@ -17,7 +17,7 @@ namespace Parcial2_LindonCastillo.Entidades.Tests
         public void GuardarTest()
         {
             Contexto db = new Contexto();
-            Inscripcion inscripcion = new Inscripcion();
+            Inscripcion inscripcion = new Inscripcion(); 
             inscripcion.InscripcionId = 0;
             inscripcion.Fecha = DateTime.Now;
             inscripcion.Monto = 0;
